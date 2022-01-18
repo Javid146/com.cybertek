@@ -1,10 +1,7 @@
 package com.cybertek.tests.day9_testng;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class BeforeandAfterTest {
 
@@ -15,9 +12,9 @@ public class BeforeandAfterTest {
     }
 
     /*afterClass RUNS ONCE after EVERYTHING. NO MATTER WHAT RUNS ONLY ONCE//////////////////////////////////////*/
-    @BeforeClass
+    @AfterClass
     public void afterClass(){
-        System.out.println("\t BEFORE CLASS");
+        System.out.println("\t AFTER CLASS");
     }
 
     /*BEFORE METHOD EXECUTES BEFORE ALL THE METHODS THAT HAVE ANNOTATION @TEST*

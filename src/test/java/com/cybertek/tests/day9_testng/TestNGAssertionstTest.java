@@ -72,7 +72,7 @@ public class TestNGAssertionstTest {
 
         String expected1 = "java";
         String actual1 = "java - Google search";
-        //VERIFIES THAT ONE VALUE STARTS WITH OR CONTAINS THE OTHER ONE/////////////////////
+        //VERIFIES THAT ONE VALUE STARTS WITH OR CONTAINS THE OTHER ONE////////////////////////////////////////
         Assert.assertTrue(actual1.contains(expected1));
         Assert.assertTrue(actual1.startsWith(expected1));
 
