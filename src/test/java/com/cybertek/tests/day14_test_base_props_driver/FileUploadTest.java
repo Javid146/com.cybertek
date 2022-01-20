@@ -14,19 +14,20 @@ public class FileUploadTest extends TestBase {
 
     @Test
     public void fileUploadTest(){
-        String url = ConfigurationReader.getProperty("url");
+        String url = ConfigurationReader.getProperty("url");        //TODO/////////////////////////////
         driver.get(url);
 
         WebElement file_upload = driver.findElement(By.linkText("File Upload"));
         file_upload.click();
 
         WebElement fileInput = driver.findElement(By.id("file-upload"));
+
         fileInput.sendKeys("C:/Users/mamma/Desktop/my_file.txt");
 
         WebElement submit = driver.findElement(By.id("file-submit"));
         submit.click();
 
-        WebElement uploadFile = driver.findElement(By.id("upload-files"));
+        WebElement uploadFile = driver.findElement(By.id("uploaded-files"));
         Assert.assertEquals(uploadFile.getText(), "my_file.txt");
     }
 }

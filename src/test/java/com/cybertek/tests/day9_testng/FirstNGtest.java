@@ -9,6 +9,7 @@ public class FirstNGtest {
     public void test1(){
         System.out.println("TEST ONE");
     }
+
     @Ignore //IGNORES ONLY THE METHOD IT IS ATTACHED TO. METHOD WILL NOT EXECUTE. NOT THE REST.
     @Test
     public void test2(){

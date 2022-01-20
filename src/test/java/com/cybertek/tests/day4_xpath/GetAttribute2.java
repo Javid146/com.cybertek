@@ -18,8 +18,8 @@ public class GetAttribute2 {
         WebElement tag = driver.findElement(By.tagName("a"));
         System.out.println(tag.getAttribute("href"));*/
 
-        WebElement exmple2 = driver.findElement(By.partialLinkText("Example 2"));
-        System.out.println(exmple2.getText());
+        WebElement example2 = driver.findElement(By.partialLinkText("Example 2"));
+        System.out.println(example2.getText());
 
 
 

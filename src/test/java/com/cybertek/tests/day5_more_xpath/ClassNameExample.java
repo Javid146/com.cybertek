@@ -13,7 +13,7 @@ public class ClassNameExample {
         WebElement link = driver.findElement(By.className("nav-link"));
         System.out.println(link.getText());
 
-        //classname does not work if its value has a space. Below:
+        //class attribute does not work if its value has a space. Below:
         //WebElement loginBtn = driver.findElement(By.className("btn btn-primary"));
         //loginBtn.click();
 

@@ -3,7 +3,9 @@ package com.cybertek.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 
 public class Driver {
 
@@ -25,13 +27,25 @@ public class Driver {
                   WebDriverManager.chromedriver().setup();
                   driver = new ChromeDriver();
                   break;
+              case "chrome-headless":
+                  WebDriverManager.chromedriver().setup();
+                  driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                  break;
               case "firefox":
                   WebDriverManager.firefoxdriver().setup();
-                  driver = new FirefoxDriver(); }
+                  driver = new FirefoxDriver();
+              case"opera":
+                  WebDriverManager.operadriver().setup();
+                  driver = new OperaDriver();
+                  break;
+          }
 
         }
         return driver;
     }
 
-
+    public static void closeDriver(){
+        driver.quit();
+        driver=null;
+    }
 }

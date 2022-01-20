@@ -109,7 +109,7 @@ public class ExplicitWait {
 
         WebElement myCalendar = driver.findElement(By.linkText("My Calendar"));
 
-        //find the element with class loader mask and wait until it is not visible
+        //todo find the element with class loader mask and wait until it is not visible
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(".loader-mask")));
         myCalendar.click();
     }

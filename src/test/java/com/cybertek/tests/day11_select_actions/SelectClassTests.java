@@ -37,7 +37,7 @@ public class SelectClassTests {
         Select dropdownList = new Select(dropdown);
 
         //get selected option
-        WebElement selectedOption = dropdownList.getFirstSelectedOption();
+        WebElement selectedOption = dropdownList.getFirstSelectedOption();//TODO
         System.out.println(selectedOption.getText());
 
         //TODO compare expected to actual
@@ -89,7 +89,7 @@ public class SelectClassTests {
         System.out.println(monthList.getFirstSelectedOption().getText());
 
         //TODO returns all of the available options from dropdown
-        List<WebElement> allOptions = monthList.getOptions();
+        List<WebElement> allOptions = monthList.getOptions();                                   //TODO
 
 
         System.out.println("--------GET MONTHS--------");
@@ -98,7 +98,7 @@ public class SelectClassTests {
         }
 
         //TODO THIS METHOD SHOWS THE CURRENT MONTH OF THE YEAR
-        System.out.println("CURRENT MONTH IS: "+LocalDate.now().getMonth().name());
+        System.out.println("CURRENT MONTH IS: "+LocalDate.now().getMonth().name());           //TODO
 
         //verify months dropdown always shows current month
         String expected = LocalDate.now().getMonth().name();

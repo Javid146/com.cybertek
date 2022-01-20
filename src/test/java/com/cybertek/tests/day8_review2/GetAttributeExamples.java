@@ -14,7 +14,7 @@ public class GetAttributeExamples {
 
         //System.out.println(driver.getCurrentUrl());//GETS THE WEBSITEEEEEEEEEEEEEEE////////////////////
 
-        System.out.println(driver.getPageSource());//gives you HTML CODE OF THE PAGEEEEEEEEEEEEEEEEEEEEEE
+        System.out.println(driver.getPageSource());//TODO gives you HTML CODE OF THE PAGEEEEEEEEEEEEEEEEEEEEEE
 
         WebElement myEbayLink = driver.findElement(By.linkText("My eBay"));
         String classValue = myEbayLink.getAttribute("class");//GIVES THE VALUE OF THE ATTRIBUTE class

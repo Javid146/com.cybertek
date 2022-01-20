@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class AmazonTest {
     public static void main(String[] args) {
-        //nameMatch();
+        nameMatch();
         secondNameMatch();
     }
 
@@ -49,7 +49,7 @@ public class AmazonTest {
         * But if elements are not siblings, then we do:
         * 1. Write xpath that matches similar elements. For ex: like below:
         //span[@class='a-size-base-plus a-color-base a-text-normal']
-        2. Wrap xpath in PARENTHESIS AND ADD INDEX AT THE END:
+        2. TODO Wrap xpath in PARENTHESIS AND ADD INDEX AT THE END:
         * (//span[@class='a-size-base-plus a-color-base a-text-normal'])[2]
         * THIS METHOD WILL FIND ALL THE SIMILAR ELEMENTS. ALL YOU NEED TO DO IS TO CHANGE THE INDEX
         * (//span[@class='a-size-base-plus a-color-base a-text-normal'])[3]

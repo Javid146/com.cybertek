@@ -24,6 +24,7 @@ public class EbaySearchTest {
         WebElement countElem = driver.findElement(By.cssSelector("h1>span"));
         String count = countElem.getText();
         System.out.println(count);
+
         //CONVERT STRING INTO INT/////////////////////////////////////////////////////////////////
         int CountOne = Integer.parseInt(count.replace(",", ""));
         System.out.println("CountOne = " + CountOne);

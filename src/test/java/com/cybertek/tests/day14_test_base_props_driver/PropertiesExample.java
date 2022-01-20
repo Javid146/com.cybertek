@@ -21,10 +21,10 @@ public class PropertiesExample {
 
 //Properties --> class from java that saves key value combinations
         Properties properties = new Properties();
-        properties.setProperty("browser", "chrome");
+        properties.setProperty("browser", "chrome");                          //TODO SETTER
         properties.setProperty("url", "http://practice.cybertek.com");
 
-        String browser = properties.getProperty("browser");
+        String browser = properties.getProperty("browser");                 //TODO GETTER
         System.out.println("browser name = " + browser);
 
         //get browser/url from properties file

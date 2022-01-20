@@ -13,7 +13,8 @@ public class CssExample {
         //WebElement button = driver.findElement(By.cssSelector("#disappearing_button"));
         WebElement button = driver.findElement(By.cssSelector(".nav-link"));
         //<a class="nav-link" href="/">Home</a>
-        //In css .(dot) means class. Just put . and write class name after it.
+
+        //TODO In css .(dot) means class. Just put . and write class name after it.
         //.nav-link"
         System.out.println(button.getText());
         //if element has multiple classes we do: .col-4.col-md-4
