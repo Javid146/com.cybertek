@@ -16,6 +16,4 @@ public class BrowserUtils {
     }
     return listSt;
     }
-
-
 }

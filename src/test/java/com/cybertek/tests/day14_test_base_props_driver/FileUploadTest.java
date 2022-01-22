@@ -1,14 +1,11 @@
 package com.cybertek.tests.day14_test_base_props_driver;
 
-import com.cybertek.test_base.TestBase;
+import com.cybertek.base.TestBase;
 import com.cybertek.utilities.ConfigurationReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class FileUploadTest extends TestBase {
 

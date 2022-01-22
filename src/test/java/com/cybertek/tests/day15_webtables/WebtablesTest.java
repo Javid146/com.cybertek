@@ -1,6 +1,6 @@
 package com.cybertek.tests.day15_webtables;
 
-import com.cybertek.test_base.TestBase;
+import com.cybertek.base.TestBase;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
 import org.openqa.selenium.By;
@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WebtablesTest extends TestBase {
