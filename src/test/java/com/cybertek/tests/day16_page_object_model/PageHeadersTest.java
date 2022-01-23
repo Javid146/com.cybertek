@@ -14,24 +14,34 @@ public class PageHeadersTest extends VyTrackTestBase {
    @Test
    public void dashboardPageTest(){
 
-        String username =ConfigurationReader.getProperty("driver_username");
-       String password =ConfigurationReader.getProperty("driver_password");
-       loginPage.LoginPage(username,password);
+       test = report.createTest("Dashboard page title test");
 
+        String username =ConfigurationReader.getProperty("driver_username");
+        String password =ConfigurationReader.getProperty("driver_password");
+        test.info("log in to app");
+        loginPage.LoginPage(username,password);
 
        wait.until(ExpectedConditions.textToBePresentInElement(dashboardPage.pageHeader, "Quick Launchpad"));
         String actual = dashboardPage.pageHeader.getText();
+        test.info("verifying page header text");
         assertEquals(actual, "Quick Launchpad");
+        test.pass("Pass: Dashboard page title test");
     }
 
 
     @Test
     public void fleetVehiclesTest()throws InterruptedException{
+
+        test = report.createTest("Vehicles page title test");
+
         String username =ConfigurationReader.getProperty("driver_username");
         String password =ConfigurationReader.getProperty("driver_password");
+        test.info("Logging in to application");
+        test.info("Username: "+username);
+        test.info("Password: "+password);
         loginPage.LoginPage(username,password);
-
         //change page
+        test.info("Going to Fleet page -> Vehicles");
          Thread.sleep(4000);
          dashboardPage.fleet.click();
          wait.until(ExpectedConditions.elementToBeClickable(dashboardPage.vehicles));
@@ -39,7 +49,7 @@ public class PageHeadersTest extends VyTrackTestBase {
          dashboardPage.vehicles.click();
 
          wait.until(ExpectedConditions.textToBePresentInElement(vehiclePage.pageHeader, "Cars"));
-
+         test.pass("Pass: Vehicles page title test");
          String actual = vehiclePage.pageHeader.getText();
          assertEquals(actual, "Cars");
 
