@@ -1,5 +1,4 @@
 package com.cybertek.base;
-
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;

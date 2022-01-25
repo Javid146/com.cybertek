@@ -9,10 +9,12 @@ import com.cybertek.pages.LoginPage;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
+import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
@@ -26,6 +28,7 @@ public abstract class VyTrackTestBase {
     protected ExtentReports report;
     private ExtentHtmlReporter htmlReporter;
     protected ExtentTest test;
+    public SoftAssert sofAssert;
 
 
     @BeforeSuite            //todo suite is the biggest collection. it will run before all methods, classes and everything.
@@ -52,23 +55,23 @@ public abstract class VyTrackTestBase {
     public void tearDownSuite(){report.flush();}
 
 
-    @Parameters ("url3") //name ("url") should be exactly like in xml. TODO Parameters MEANS WE GET PARAMETERS FROM TESTNG_RUNNER.XML or SMOKE_TEST_RUNNER.XML FILE. IF THERE IS NO PARAMETERS, IT WILL NOT RUN
-    @BeforeMethod ()
+
+@Parameters("url")
+    @BeforeMethod
     public void setUpMethod(@Optional String url) {
-        System.out.println("url3 = " + url);
+    System.out.println("url = " + url);
         driver = Driver.getDriver();
-
-        //todo means if url is not shown take parameters from testng_runnner.xml
-        if(url==null){driver.get(ConfigurationReader.getProperty("url3"));
-        }else {driver.get(url);}
-
         wait = new WebDriverWait(driver, 10);
+        sofAssert = new SoftAssert();
+        //todo means if url is not shown take parameters from testng_runnner.xml
+       driver.get(ConfigurationReader.getProperty("url2"));
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
         vehiclePage = new VehiclePage();
         calendarEvntPg = new CreateCalendarEventPage();
 
     }
+
 
     @AfterMethod
     public void tearDownMethod(ITestResult iTestResult) throws InterruptedException, IOException {
@@ -86,10 +89,14 @@ public abstract class VyTrackTestBase {
 
         Thread.sleep(2000);
         Driver.closeDriver();
+        //sofAssert.assertAll();
+         }
+
+
 
 
 
 
 
     }
-}
+
